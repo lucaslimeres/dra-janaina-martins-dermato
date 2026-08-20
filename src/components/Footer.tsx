@@ -1,3 +1,4 @@
+import logo from "../assets/images/logo.jpeg";
 import { site } from "../config/site";
 import { InstagramIcon } from "./icons/InstagramIcon";
 
@@ -7,9 +8,11 @@ export function Footer() {
   return (
     <footer className="border-t border-rose-100 bg-cream-dark/60 py-12">
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-5 px-5 text-center sm:px-8">
-        <span className="font-serif text-xl italic text-rose-700">
-          {site.doctorName}
-        </span>
+        <img
+          src={logo}
+          alt="Dra. Janaína Martins — Dermatologia"
+          className="h-20 w-auto mix-blend-multiply"
+        />
         <p className="text-xs text-ink/50">{site.specialty} · {site.crm}</p>
 
         <div className="flex items-center gap-5 text-ink/60">

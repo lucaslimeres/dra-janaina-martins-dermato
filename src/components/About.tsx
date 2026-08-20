@@ -6,7 +6,7 @@ const highlights = [
   {
     icon: GraduationCap,
     title: "Formação especializada",
-    text: "Médica dermatologista com formação e atualização contínua em dermatologia clínica, cirúrgica e estética.",
+    text: "Médica pós-graduada em dermatologia, com formação e atualização contínua em dermatologia clínica, cirúrgica e estética.",
   },
   {
     icon: Microscope,

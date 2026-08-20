@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
+import logo from "../assets/images/logo.jpeg";
 import { WhatsAppButton } from "./WhatsAppButton";
 
 const links = [
@@ -22,13 +23,17 @@ export function Navbar() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all ${
-        scrolled ? "bg-cream/90 backdrop-blur-md shadow-sm" : "bg-transparent"
+      className={`fixed inset-x-0 top-0 z-50 bg-cream/95 backdrop-blur-md transition-shadow ${
+        scrolled ? "shadow-sm" : ""
       }`}
     >
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 sm:px-8">
-        <a href="#topo" className="font-serif text-xl italic text-rose-700 sm:text-2xl">
-          Dra. Janaína Martins
+        <a href="#topo" className="shrink-0">
+          <img
+            src={logo}
+            alt="Dra. Janaína Martins — Dermatologia"
+            className="h-20 w-auto mix-blend-multiply sm:h-20"
+          />
         </a>
 
         <div className="hidden items-center gap-9 md:flex">
@@ -66,7 +71,9 @@ export function Navbar() {
                 {link.label}
               </a>
             ))}
-            <WhatsAppButton className="mt-2 w-full">Agendar consulta</WhatsAppButton>
+            <WhatsAppButton className="mt-2 w-full">
+              Agendar consulta
+            </WhatsAppButton>
           </div>
         </div>
       )}

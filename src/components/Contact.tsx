@@ -74,6 +74,18 @@ export function Contact() {
           </div>
         </div>
 
+        <div className="mt-10 overflow-hidden rounded-2xl border border-rose-100 shadow-sm">
+          <iframe
+            title={`Localização — ${site.location.addressLine}`}
+            src={site.location.mapsEmbedUrl}
+            width="100%"
+            height="380"
+            style={{ border: 0, display: "block" }}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+        </div>
+
         <div className="mt-14 flex justify-center">
           <WhatsAppButton message="Olá! Vim pelo site e gostaria de agendar uma consulta com a Dra. Janaína Martins.">
             Agendar pelo WhatsApp

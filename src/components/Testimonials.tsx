@@ -1,4 +1,6 @@
 import { Quote, Star } from "lucide-react";
+import { site } from "../config/site";
+import { GoogleIcon } from "./icons/GoogleIcon";
 
 const testimonials = [
   {
@@ -39,8 +41,17 @@ export function Testimonials() {
             Quem já passou por aqui
           </h2>
           <p className="mt-4 text-ink/70">
-            Avaliações reais de pacientes no Google.
+            Avaliações reais de pacientes, verificadas no Google.
           </p>
+          <div className="mt-5 inline-flex items-center gap-2 rounded-full border border-rose-100 bg-white px-4 py-2 text-sm shadow-sm">
+            <GoogleIcon size={18} />
+            <span className="font-medium text-ink/80">Avaliações no Google</span>
+            <span className="flex text-gold">
+              {Array.from({ length: 5 }).map((_, i) => (
+                <Star key={i} size={13} fill="currentColor" strokeWidth={0} />
+              ))}
+            </span>
+          </div>
         </div>
 
         <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -60,12 +71,25 @@ export function Testimonials() {
               </blockquote>
               <figcaption className="mt-5 text-sm font-semibold text-ink">
                 {t.name}
-                <span className="block text-xs font-normal text-ink/50">
+                <span className="mt-0.5 flex items-center gap-1.5 text-xs font-normal text-ink/50">
+                  <GoogleIcon size={13} />
                   Avaliação no Google
                 </span>
               </figcaption>
             </figure>
           ))}
+        </div>
+
+        <div className="mt-12 text-center">
+          <a
+            href={site.googleReviewsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-sm font-medium text-rose-700 underline underline-offset-4"
+          >
+            <GoogleIcon size={16} />
+            Ver todas as avaliações no Google
+          </a>
         </div>
       </div>
     </section>

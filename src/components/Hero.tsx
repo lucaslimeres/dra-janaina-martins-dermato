@@ -1,5 +1,5 @@
 import { ShieldCheck, Sparkles } from "lucide-react";
-import heroImg from "../assets/images/dra-janaina-hero.jpg";
+import heroImg from "../assets/images/toxina-botulinica.jpg";
 import { WhatsAppButton } from "./WhatsAppButton";
 
 export function Hero() {
@@ -57,7 +57,7 @@ export function Hero() {
             <div className="absolute -inset-4 -z-10 rounded-[2.5rem] border border-rose-200 sm:-inset-6" />
             <img
               src={heroImg}
-              alt="Dra. Janaína Martins, dermatologista"
+              alt="Aplicação de toxina botulínica em consultório"
               className="aspect-3/4 w-full rounded-[2rem] object-cover shadow-2xl shadow-rose-900/10"
             />
           </div>

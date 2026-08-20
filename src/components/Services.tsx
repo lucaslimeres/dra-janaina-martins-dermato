@@ -2,29 +2,42 @@ import {
   Scan,
   Syringe,
   Sparkle,
+  Sparkles,
   Droplet,
   ScissorsLineDashed,
   Scissors,
+  type LucideIcon,
 } from "lucide-react";
 import cirurgiaImg from "../assets/images/procedimento-cirurgia.jpeg";
 import ultrassomImg from "../assets/images/procedimento-ultrassom.jpeg";
+import toxinaImg from "../assets/images/toxina-botulinica.jpg";
 import { WhatsAppButton } from "./WhatsAppButton";
 
-const services = [
+interface Service {
+  icon: LucideIcon;
+  title: string;
+  text: string;
+  image?: string;
+  imagePosition?: string;
+}
+
+const services: Service[] = [
   {
     icon: Scan,
     title: "Consulta dermatológica",
-    text: "Avaliação completa da pele, cabelo e unhas com diagnóstico e plano de tratamento individualizado.",
+    text: "Avaliação completa da pele, cabelo e unhas, com diagnóstico e plano individualizado.",
   },
   {
     icon: Droplet,
-    title: "Tratamento de acne e manchas",
+    title: "Acne e manchas",
     text: "Protocolos personalizados para acne, melasma e manchas, com acompanhamento contínuo.",
   },
   {
     icon: Syringe,
     title: "Toxina botulínica e preenchimento",
-    text: "Procedimentos estéticos injetáveis com foco em resultados naturais e harmoniosos.",
+    text: "Procedimentos injetáveis com foco em resultados naturais e harmoniosos.",
+    image: toxinaImg,
+    imagePosition: "object-[15%_58%]",
   },
   {
     icon: Sparkle,
@@ -32,14 +45,21 @@ const services = [
     text: "Rejuvenescimento e estímulo de colágeno para uma pele mais firme e saudável.",
   },
   {
+    icon: Sparkles,
+    title: "Ultrassom microfocado",
+    text: "Efeito lifting não invasivo para firmeza e viço da pele, sem cortes.",
+    image: ultrassomImg,
+  },
+  {
     icon: ScissorsLineDashed,
     title: "Tricologia e saúde capilar",
-    text: "Investigação e tratamento de queda de cabelo e demais alterações do couro cabeludo.",
+    text: "Investigação e tratamento de queda de cabelo e alterações do couro cabeludo.",
   },
   {
     icon: Scissors,
     title: "Cirurgia dermatológica",
-    text: "Remoção de lesões de pele com técnica cirúrgica precisa e cuidado estético na cicatrização.",
+    text: "Remoção de lesões de pele com técnica precisa e cuidado estético na cicatrização.",
+    image: cirurgiaImg,
   },
 ];
 
@@ -60,52 +80,34 @@ export function Services() {
           </p>
         </div>
 
-        <div className="mt-14 grid grid-cols-1 gap-10 lg:grid-cols-2">
-          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
-            {services.map(({ icon: Icon, title, text }) => (
-              <div
-                key={title}
-                className="rounded-2xl border border-rose-100 bg-white p-6 shadow-sm transition hover:shadow-md hover:-translate-y-0.5"
-              >
-                <div className="flex h-11 w-11 items-center justify-center rounded-full bg-rose-100 text-rose-700">
-                  <Icon size={20} />
+        <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {services.map(({ icon: Icon, title, text, image, imagePosition }) => (
+            <div
+              key={title}
+              className="group overflow-hidden rounded-2xl border border-rose-100 bg-white shadow-sm transition hover:shadow-md"
+            >
+              <div className="relative aspect-4/3 overflow-hidden">
+                {image ? (
+                  <img
+                    src={image}
+                    alt={title}
+                    className={`h-full w-full object-cover transition duration-500 group-hover:scale-105 ${imagePosition ?? ""}`}
+                  />
+                ) : (
+                  <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-rose-100 to-rose-50">
+                    <Icon size={40} strokeWidth={1.4} className="text-rose-300" />
+                  </div>
+                )}
+                <div className="absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-full bg-white/90 text-rose-700 shadow-sm backdrop-blur-sm">
+                  <Icon size={17} />
                 </div>
-                <h3 className="mt-4 text-sm font-semibold text-ink">{title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-ink/60">{text}</p>
               </div>
-            ))}
-          </div>
-
-          <div className="grid grid-cols-1 gap-5 sm:grid-rows-2">
-            <div className="group relative overflow-hidden rounded-2xl shadow-sm">
-              <img
-                src={cirurgiaImg}
-                alt="Procedimento de cirurgia dermatológica"
-                className="h-56 w-full object-cover transition duration-500 group-hover:scale-105 sm:h-full"
-              />
-              <div className="absolute inset-0 bg-linear-to-t from-ink/70 via-ink/10 to-transparent" />
-              <div className="absolute inset-x-0 bottom-0 p-6">
-                <h3 className="font-serif text-xl text-white">Cirurgia dermatológica</h3>
-                <p className="mt-1 text-sm text-white/80">
-                  Remoção segura de lesões, com precisão e cuidado estético.
-                </p>
+              <div className="p-5">
+                <h3 className="text-sm font-semibold text-ink">{title}</h3>
+                <p className="mt-1.5 text-sm leading-relaxed text-ink/60">{text}</p>
               </div>
             </div>
-            <div className="group relative overflow-hidden rounded-2xl shadow-sm">
-              <img
-                src={ultrassomImg}
-                alt="Procedimento estético com ultrassom microfocado"
-                className="h-56 w-full object-cover transition duration-500 group-hover:scale-105 sm:h-full"
-              />
-              <div className="absolute inset-0 bg-linear-to-t from-ink/70 via-ink/10 to-transparent" />
-              <div className="absolute inset-x-0 bottom-0 p-6">
-                <h3 className="font-serif text-xl text-white">Ultrassom microfocado</h3>
-                <p className="mt-1 text-sm text-white/80">
-                  Efeito lifting não invasivo para firmeza e viço da pele.
-                </p>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
 
         <div className="mt-14 text-center">

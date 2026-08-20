@@ -4,33 +4,40 @@
 // pelas informações reais da clínica antes de publicar em produção.
 // ============================================================================
 
+const fullAddress =
+  "R. João Crespo Lopes, 671 - Jardim Eltonville, Sorocaba - SP, 18046-785";
+
+const googleSearchTerm = `Dra. Janaína Martins Dermatologista ${fullAddress}`;
+
 export const site = {
   doctorName: "Dra. Janaína Martins",
-  crm: "CRM/UF 00000 · RQE 00000", // TODO: substituir pelo CRM/RQE real
+  crm: "CRM/SP 145.952",
   specialty: "Dermatologista",
 
   whatsapp: {
-    // TODO: substituir pelo número real, apenas dígitos, com DDI+DDD (ex: 5511987654321)
-    number: "5511999999999",
+    number: "5515996765005",
     defaultMessage:
       "Olá! Vim pelo site e gostaria de agendar uma consulta com a Dra. Janaína Martins.",
   },
 
   instagram: {
-    handle: "@dra.janainamartins", // TODO: confirmar @ real do Instagram
-    url: "https://instagram.com/dra.janainamartins",
+    handle: "@janainamartins_dermato",
+    url: "https://www.instagram.com/janainamartins_dermato/",
   },
 
   location: {
-    // TODO: substituir pelo endereço real da clínica
-    addressLine: "Av. Exemplo, 1000 — Sala 000",
-    neighborhoodCity: "Bairro Exemplo, Sorocaba/SP",
-    mapsUrl: "https://maps.google.com/?q=Sorocaba+SP",
+    addressLine: "R. João Crespo Lopes, 671",
+    neighborhoodCity: "Jardim Eltonville, Sorocaba - SP, 18046-785",
+    mapsUrl: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(fullAddress)}`,
+    mapsEmbedUrl: `https://www.google.com/maps?q=${encodeURIComponent(fullAddress)}&output=embed`,
   },
 
+  googleReviewsUrl: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(googleSearchTerm)}`,
+
   hours: [
-    { day: "Segunda a Sexta", time: "09h às 18h" },
-    { day: "Sábado", time: "Sob consulta" },
+    { day: "Segunda a Sexta", time: "08h às 20h" },
+    { day: "Sábado", time: "08h às 12h" },
+    { day: "Domingo", time: "Fechado" },
   ],
 
   email: "contato@drajanainamartins.com.br", // TODO: confirmar e-mail real
