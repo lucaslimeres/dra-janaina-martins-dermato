@@ -15,7 +15,7 @@ export function Hero() {
       />
 
       <div className="relative mx-auto grid max-w-6xl grid-cols-1 items-center gap-14 px-5 sm:px-8 lg:grid-cols-2 lg:gap-10">
-        <div className="order-2 text-center lg:order-1 lg:text-left">
+        <div className="order-1 text-center lg:order-1 lg:text-left">
           <span className="inline-flex items-center gap-2 rounded-full bg-rose-100 px-4 py-1.5 text-xs font-medium tracking-wide text-rose-700">
             <Sparkles size={14} /> Dermatologia clínica e estética
           </span>
@@ -52,7 +52,7 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="order-1 lg:order-2">
+        <div className="order-2 lg:order-2">
           <div className="relative mx-auto max-w-sm">
             <div className="absolute -inset-4 -z-10 rounded-[2.5rem] border border-rose-200 sm:-inset-6" />
             <img

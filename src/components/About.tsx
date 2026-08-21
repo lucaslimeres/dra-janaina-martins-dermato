@@ -29,7 +29,7 @@ export function About() {
   return (
     <section id="sobre" className="py-24 sm:py-32">
       <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-16 px-5 sm:px-8 lg:grid-cols-2">
-        <div className="relative mx-auto max-w-md lg:mx-0">
+        <div className="relative order-2 mx-auto max-w-md lg:order-1 lg:mx-0">
           <div className="absolute -bottom-6 -right-6 -z-10 h-full w-full rounded-[2rem] bg-rose-100 sm:-bottom-8 sm:-right-8" />
           <img
             src={aboutImg}
@@ -38,7 +38,7 @@ export function About() {
           />
         </div>
 
-        <div>
+        <div className="order-1 lg:order-2">
           <span className="text-xs font-medium uppercase tracking-[0.2em] text-rose-600">
             Sobre a médica
           </span>
