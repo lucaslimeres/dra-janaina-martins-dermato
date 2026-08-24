@@ -11,6 +11,10 @@ import {
 import cirurgiaImg from "../assets/images/procedimento-cirurgia.jpeg";
 import ultrassomImg from "../assets/images/procedimento-ultrassom.jpeg";
 import toxinaImg from "../assets/images/toxina-botulinica.jpg";
+import consultaImg from "../assets/images/consulta-dermatologica.jpg";
+import acneImg from "../assets/images/acne-manchas.jpg";
+import peelingImg from "../assets/images/peelings-bioestimuladores.jpg";
+import tricologiaImg from "../assets/images/tricologia-capilar.jpg";
 import { WhatsAppButton } from "./WhatsAppButton";
 
 interface Service {
@@ -26,11 +30,14 @@ const services: Service[] = [
     icon: Scan,
     title: "Consulta dermatológica",
     text: "Avaliação completa da pele, cabelo e unhas, com diagnóstico e plano individualizado.",
+    image: consultaImg,
   },
   {
     icon: Droplet,
     title: "Acne e manchas",
     text: "Protocolos personalizados para acne, melasma e manchas, com acompanhamento contínuo.",
+    image: acneImg,
+    imagePosition: "object-[50%_55%]",
   },
   {
     icon: Syringe,
@@ -43,6 +50,7 @@ const services: Service[] = [
     icon: Sparkle,
     title: "Peelings e bioestimuladores",
     text: "Rejuvenescimento e estímulo de colágeno para uma pele mais firme e saudável.",
+    image: peelingImg,
   },
   {
     icon: Sparkles,
@@ -54,6 +62,8 @@ const services: Service[] = [
     icon: ScissorsLineDashed,
     title: "Tricologia e saúde capilar",
     text: "Investigação e tratamento de queda de cabelo e alterações do couro cabeludo.",
+    image: tricologiaImg,
+    imagePosition: "object-[35%_60%]",
   },
   {
     icon: Scissors,

@@ -1,29 +1,20 @@
-import { WhatsAppProvider } from "./context/WhatsAppContext";
-import { Navbar } from "./components/Navbar";
-import { Hero } from "./components/Hero";
-import { About } from "./components/About";
-import { Services } from "./components/Services";
-import { Testimonials } from "./components/Testimonials";
-import { CtaSection } from "./components/CtaSection";
-import { Contact } from "./components/Contact";
-import { Footer } from "./components/Footer";
-import { FloatingWhatsApp } from "./components/FloatingWhatsApp";
+import { Routes, Route } from "react-router-dom";
+import { Layout } from "./components/Layout";
+import { Home } from "./pages/Home";
+import { Articles } from "./pages/Articles";
+import { ArticleDetail } from "./pages/ArticleDetail";
+import { NotFound } from "./pages/NotFound";
 
 function App() {
   return (
-    <WhatsAppProvider>
-      <Navbar />
-      <main>
-        <Hero />
-        <About />
-        <Services />
-        <Testimonials />
-        <CtaSection />
-        <Contact />
-      </main>
-      <Footer />
-      <FloatingWhatsApp />
-    </WhatsAppProvider>
+    <Routes>
+      <Route element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="conteudos" element={<Articles />} />
+        <Route path="conteudos/:slug" element={<ArticleDetail />} />
+        <Route path="*" element={<NotFound />} />
+      </Route>
+    </Routes>
   );
 }
 

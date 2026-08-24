@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import logo from "../assets/images/logo.jpeg";
 import { WhatsAppButton } from "./WhatsAppButton";
 
 const links = [
-  { label: "Sobre", href: "#sobre" },
-  { label: "Procedimentos", href: "#procedimentos" },
-  { label: "Depoimentos", href: "#depoimentos" },
-  { label: "Contato", href: "#contato" },
+  { label: "Sobre", to: "/#sobre" },
+  { label: "Procedimentos", to: "/#procedimentos" },
+  { label: "Depoimentos", to: "/#depoimentos" },
+  { label: "Conteúdos", to: "/conteudos" },
+  { label: "Contato", to: "/#contato" },
 ];
 
 export function Navbar() {
@@ -28,23 +30,23 @@ export function Navbar() {
       }`}
     >
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 sm:px-8">
-        <a href="#topo" className="shrink-0">
+        <Link to="/" className="shrink-0">
           <img
             src={logo}
             alt="Dra. Janaína Martins — Dermatologia"
-            className="h-20 w-auto mix-blend-multiply sm:h-20"
+            className="h-20 w-auto mix-blend-multiply"
           />
-        </a>
+        </Link>
 
         <div className="hidden items-center gap-9 md:flex">
           {links.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
+            <Link
+              key={link.to}
+              to={link.to}
               className="text-sm font-medium text-ink/70 transition hover:text-rose-700"
             >
               {link.label}
-            </a>
+            </Link>
           ))}
           <WhatsAppButton>Agendar consulta</WhatsAppButton>
         </div>
@@ -62,14 +64,14 @@ export function Navbar() {
         <div className="border-t border-rose-100 bg-cream px-5 pb-6 pt-2 md:hidden">
           <div className="flex flex-col gap-4">
             {links.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
+              <Link
+                key={link.to}
+                to={link.to}
                 onClick={() => setOpen(false)}
                 className="text-base font-medium text-ink/80"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
             <WhatsAppButton className="mt-2 w-full">
               Agendar consulta

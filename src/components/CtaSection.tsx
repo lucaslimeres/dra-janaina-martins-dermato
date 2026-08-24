@@ -18,15 +18,15 @@ export function CtaSection() {
           Já agendou o seu momento de cuidado?
         </h2>
         <p className="mx-auto mt-5 max-w-xl leading-relaxed text-rose-50/80">
-          Dê o primeiro passo para uma pele mais saudável. Fale agora com a equipe da
-          Dra. Janaína Martins e agende sua avaliação.
+          Dê o primeiro passo para uma pele mais saudável. Fale agora com a
+          equipe da Dra. Janaína Martins e agende sua avaliação.
         </p>
 
         <div className="mx-auto mt-8 flex max-w-md items-start gap-3 rounded-xl border border-white/15 bg-white/10 p-4 text-left text-sm text-rose-50/90">
           <Info size={18} className="mt-0.5 shrink-0" />
           <p>
-            Reforçamos: o atendimento é <strong>particular</strong>, sem convênios ou
-            planos de saúde. Consulte-nos sobre nota fiscal para reembolso.
+            Reforçamos: o atendimento é <strong>particular</strong>.
+            Consulte-nos sobre nota fiscal para reembolso.
           </p>
         </div>
 

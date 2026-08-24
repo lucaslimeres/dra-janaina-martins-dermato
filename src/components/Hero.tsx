@@ -4,7 +4,10 @@ import { WhatsAppButton } from "./WhatsAppButton";
 
 export function Hero() {
   return (
-    <section id="topo" className="relative overflow-hidden pt-32 pb-20 sm:pt-40 sm:pb-28">
+    <section
+      id="topo"
+      className="relative overflow-hidden pt-32 pb-20 sm:pt-40 sm:pb-28"
+    >
       <div
         className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full bg-rose-200/40 blur-3xl"
         aria-hidden="true"
@@ -17,18 +20,19 @@ export function Hero() {
       <div className="relative mx-auto grid max-w-6xl grid-cols-1 items-center gap-14 px-5 sm:px-8 lg:grid-cols-2 lg:gap-10">
         <div className="order-1 text-center lg:order-1 lg:text-left">
           <span className="inline-flex items-center gap-2 rounded-full bg-rose-100 px-4 py-1.5 text-xs font-medium tracking-wide text-rose-700">
-            <Sparkles size={14} /> Dermatologia clínica e estética
+            <Sparkles size={14} /> Dermatologia clínica e estética em Sorocaba
           </span>
 
           <h1 className="mt-6 font-serif text-4xl leading-[1.1] text-ink sm:text-5xl lg:text-[3.4rem]">
             Cuidado especializado para a{" "}
-            <span className="italic text-rose-600">saúde e beleza</span> da sua pele
+            <span className="italic text-rose-600">saúde e beleza</span> da sua
+            pele
           </h1>
 
           <p className="mx-auto mt-6 max-w-lg text-base leading-relaxed text-ink/70 lg:mx-0">
-            A Dra. Janaína Martins oferece atendimento dermatológico humanizado e
-            individualizado, unindo ciência, precisão técnica e um olhar atento a cada
-            detalhe da sua pele.
+            A Dra. Janaína Martins oferece atendimento dermatológico humanizado
+            e individualizado, unindo ciência, precisão técnica e um olhar
+            atento a cada detalhe da sua pele.
           </p>
 
           <div className="mt-9 flex flex-col items-center gap-4 sm:flex-row sm:justify-center lg:justify-start">
@@ -46,8 +50,8 @@ export function Hero() {
           <div className="mt-8 inline-flex items-center gap-2 rounded-xl border border-rose-200/70 bg-white/60 px-4 py-3 text-xs text-ink/60 sm:text-sm">
             <ShieldCheck size={18} className="shrink-0 text-rose-600" />
             <span>
-              Atendimento <strong className="text-ink/80">exclusivamente particular</strong>
-              {" "}— não atendemos convênios.
+              Atendimento{" "}
+              <strong className="text-ink/80">exclusivamente particular</strong>
             </span>
           </div>
         </div>

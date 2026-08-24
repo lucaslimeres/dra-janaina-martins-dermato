@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import logo from "../assets/images/logo.jpeg";
 import { site } from "../config/site";
 import { InstagramIcon } from "./icons/InstagramIcon";
@@ -13,7 +14,14 @@ export function Footer() {
           alt="Dra. Janaína Martins — Dermatologia"
           className="h-20 w-auto mix-blend-multiply"
         />
-        <p className="text-xs text-ink/50">{site.specialty} · {site.crm}</p>
+        <p className="text-xs text-ink/50">{site.crm}</p>
+
+        <Link
+          to="/conteudos"
+          className="text-sm font-medium text-rose-700 transition hover:text-rose-800"
+        >
+          Conteúdos
+        </Link>
 
         <div className="flex items-center gap-5 text-ink/60">
           <a
@@ -28,8 +36,7 @@ export function Footer() {
         </div>
 
         <p className="max-w-lg text-xs leading-relaxed text-ink/40">
-          Atendimento exclusivamente particular — não atendemos convênios ou planos de
-          saúde.
+          Atendimento exclusivamente particular.
         </p>
 
         <p className="text-xs text-ink/40">
