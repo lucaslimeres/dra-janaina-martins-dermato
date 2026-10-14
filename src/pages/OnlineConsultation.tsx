@@ -14,7 +14,7 @@ import {
   Video,
   type LucideIcon,
 } from "lucide-react";
-import heroImg from "../assets/images/dra-janaina-about.jpg";
+import heroImg from "../assets/images/dra-janaina-online.jpg";
 import ctaImg from "../assets/images/dra-janaina-cta.jpg";
 import { WhatsAppButton } from "../components/WhatsAppButton";
 import { site } from "../config/site";
@@ -252,7 +252,7 @@ export function OnlineConsultation() {
             <div className="absolute -inset-4 -z-10 rounded-[2.5rem] border border-rose-200 sm:-inset-6" />
             <img
               src={heroImg}
-              alt={`${site.doctorName}, dermatologista`}
+              alt={`${site.doctorName}, dermatologista, em atendimento online pelo notebook`}
               className="aspect-3/4 w-full rounded-[2rem] object-cover shadow-2xl shadow-rose-900/10"
             />
             <div className="absolute -bottom-5 left-1/2 flex -translate-x-1/2 items-center gap-2 whitespace-nowrap rounded-full bg-white px-5 py-2.5 text-sm font-medium text-ink shadow-lg">
