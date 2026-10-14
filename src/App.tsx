@@ -3,6 +3,7 @@ import { Layout } from "./components/Layout";
 import { Home } from "./pages/Home";
 import { Articles } from "./pages/Articles";
 import { ArticleDetail } from "./pages/ArticleDetail";
+import { OnlineConsultation } from "./pages/OnlineConsultation";
 import { NotFound } from "./pages/NotFound";
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
         <Route index element={<Home />} />
         <Route path="conteudos" element={<Articles />} />
         <Route path="conteudos/:slug" element={<ArticleDetail />} />
+        <Route path="dermatologista-online" element={<OnlineConsultation />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
