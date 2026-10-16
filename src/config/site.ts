@@ -12,7 +12,7 @@ const googleSearchTerm = `Dra. Janaína Martins Dermatologista ${fullAddress}`;
 export const site = {
   doctorName: "Dra. Janaína Martins",
   crm: "CRM/SP 145.952",
-  specialty: "Dermatologista",
+  specialty: "Médica",
 
   whatsapp: {
     number: "5515996765005",

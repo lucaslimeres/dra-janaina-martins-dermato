@@ -27,7 +27,7 @@ const benefits: { icon: LucideIcon; title: string; text: string }[] = [
   {
     icon: Globe,
     title: "De qualquer lugar do Brasil",
-    text: "Consulte com a Dra. Janaína Martins de onde você estiver, sem depender de um dermatologista na sua cidade.",
+    text: "Consulte com a Dra. Janaína Martins de onde você estiver, sem precisar sair da sua cidade.",
   },
   {
     icon: House,
@@ -162,13 +162,13 @@ function useOnlineConsultationJsonLd() {
       "@graph": [
         {
           "@type": "MedicalWebPage",
-          name: "Consulta com dermatologista online",
+          name: "Consulta online com a Dra. Janaína Martins",
           description:
             "Atendimento dermatológico online por videochamada para pacientes de todo o Brasil.",
           author: {
             "@type": "Person",
             name: site.doctorName,
-            jobTitle: "Dermatologista",
+            jobTitle: "Médica",
           },
         },
         {
@@ -191,9 +191,9 @@ function useOnlineConsultationJsonLd() {
 
 export function OnlineConsultation() {
   useSeo({
-    title: "Dermatologista online para todo o Brasil | Dra. Janaína Martins",
+    title: "Consulta online para todo o Brasil | Dra. Janaína Martins",
     description:
-      "Consulte com a dermatologista Dra. Janaína Martins por videochamada, sem sair de casa. Atendimento online para acne, rosácea, melasma, queda de cabelo, dermatites e psoríase.",
+      "Consulte com a Dra. Janaína Martins por videochamada, sem sair de casa. Atendimento online para acne, rosácea, melasma, queda de cabelo, dermatites e psoríase.",
   });
   useOnlineConsultationJsonLd();
 
@@ -216,9 +216,9 @@ export function OnlineConsultation() {
               <Video size={14} /> Atendimento online para todo o Brasil
             </span>
 
-            <h1 className="mt-6 font-serif text-4xl leading-[1.1] text-ink sm:text-5xl lg:text-[3.4rem]">
-              Consulte com uma dermatologista{" "}
-              <span className="italic text-rose-600">sem sair de casa</span>
+            <h1 className="mt-6 font-serif text-4xl leading-[1.1] text-ink sm:text-5xl lg:text-[3.1rem]">
+              Atendimento médico para cuidar da saúde da sua pele,{" "}
+              <span className="italic text-rose-600">sem sair de casa.</span>
             </h1>
 
             <p className="mx-auto mt-6 max-w-lg text-base leading-relaxed text-ink/70 lg:mx-0">
@@ -252,7 +252,7 @@ export function OnlineConsultation() {
             <div className="absolute -inset-4 -z-10 rounded-[2.5rem] border border-rose-200 sm:-inset-6" />
             <img
               src={heroImg}
-              alt={`${site.doctorName}, dermatologista, em atendimento online pelo notebook`}
+              alt={`${site.doctorName} em atendimento online pelo notebook`}
               className="aspect-3/4 w-full rounded-[2rem] object-cover shadow-2xl shadow-rose-900/10"
             />
             <div className="absolute -bottom-5 left-1/2 flex -translate-x-1/2 items-center gap-2 whitespace-nowrap rounded-full bg-white px-5 py-2.5 text-sm font-medium text-ink shadow-lg">
