@@ -131,7 +131,7 @@ export const articles: Article[] = [
       { type: "heading", text: "Sobre a Dra. Janaína Martins" },
       {
         type: "paragraph",
-        text: "A Dra. Janaína Martins é médica dermatologista e atua no diagnóstico, tratamento e acompanhamento das doenças da pele, cabelos e unhas. Com atendimento voltado para dermatologia clínica, cirúrgica e estética, realiza avaliação individualizada e criteriosa, sempre priorizando segurança, precisão diagnóstica e resultados naturais.",
+        text: "A Dra. Janaína Martins é médica e atua no diagnóstico, tratamento e acompanhamento das doenças da pele, cabelos e unhas. Com atendimento voltado para dermatologia clínica, cirúrgica e estética, realiza avaliação individualizada e criteriosa, sempre priorizando segurança, precisão diagnóstica e resultados naturais.",
       },
       {
         type: "paragraph",
@@ -266,7 +266,7 @@ export const articles: Article[] = [
       { type: "heading", text: "Sobre a Dra. Janaína Martins" },
       {
         type: "paragraph",
-        text: "A Dra. Janaína Martins é médica dermatologista e realiza cirurgias dermatológicas com avaliação criteriosa, técnica adequada e acompanhamento pós-operatório completo.",
+        text: "A Dra. Janaína Martins é médica e realiza cirurgias dermatológicas com avaliação criteriosa, técnica adequada e acompanhamento pós-operatório completo.",
       },
       {
         type: "paragraph",
@@ -404,7 +404,7 @@ export const articles: Article[] = [
       { type: "heading", text: "Sobre a Dra. Janaína Martins" },
       {
         type: "paragraph",
-        text: "A Dra. Janaína Martins é médica dermatologista e realiza avaliação individualizada para indicação do ultrassom microfocado (Liftera), com planejamento personalizado e acompanhamento completo.",
+        text: "A Dra. Janaína Martins é médica e realiza avaliação individualizada para indicação do ultrassom microfocado (Liftera), com planejamento personalizado e acompanhamento completo.",
       },
       {
         type: "paragraph",
@@ -593,7 +593,7 @@ export const articles: Article[] = [
       { type: "heading", text: "Sobre a Dra. Janaína Martins" },
       {
         type: "paragraph",
-        text: "A Dra. Janaína Martins é médica dermatologista e realiza diagnóstico e tratamento da psoríase de forma individualizada, incluindo terapias tópicas, sistêmicas e imunobiológicas quando indicadas.",
+        text: "A Dra. Janaína Martins é médica e realiza diagnóstico e tratamento da psoríase de forma individualizada, incluindo terapias tópicas, sistêmicas e imunobiológicas quando indicadas.",
       },
       {
         type: "paragraph",

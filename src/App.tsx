@@ -13,7 +13,7 @@ function App() {
         <Route index element={<Home />} />
         <Route path="conteudos" element={<Articles />} />
         <Route path="conteudos/:slug" element={<ArticleDetail />} />
-        <Route path="dermatologista-online" element={<OnlineConsultation />} />
+        <Route path="consulta-online" element={<OnlineConsultation />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>

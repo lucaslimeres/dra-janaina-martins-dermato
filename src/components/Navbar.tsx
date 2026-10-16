@@ -8,7 +8,7 @@ const links = [
   { label: "Sobre", to: "/#sobre" },
   { label: "Procedimentos", to: "/#procedimentos" },
   { label: "Depoimentos", to: "/#depoimentos" },
-  { label: "Consulta online", to: "/dermatologista-online" },
+  { label: "Consulta online", to: "/consulta-online" },
   { label: "Conteúdos", to: "/conteudos" },
   { label: "Contato", to: "/#contato" },
 ];

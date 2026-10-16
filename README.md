@@ -1,6 +1,6 @@
 # Dra. Janaína Martins — Site
 
-Landing page da Dra. Janaína Martins, médica dermatologista. Site novo,
+Landing page da Dra. Janaína Martins, médica. Site novo,
 construído em React, para substituir o site antigo (WordPress) que saiu do
 ar. Objetivo: atrair novos pacientes e converter visitas em contato via
 WhatsApp, deixando claro que o atendimento é **particular** (sem convênios).
@@ -9,7 +9,7 @@ WhatsApp, deixando claro que o atendimento é **particular** (sem convênios).
 
 - [React 19](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
 - [Vite](https://vite.dev/) — build e dev server
-- [React Router](https://reactrouter.com/) — roteamento client-side (`/`, `/conteudos`, `/conteudos/:slug`)
+- [React Router](https://reactrouter.com/) — roteamento client-side (`/`, `/consulta-online`, `/conteudos`, `/conteudos/:slug`)
 - [Tailwind CSS v4](https://tailwindcss.com/) — estilização (via `@tailwindcss/vite`, sem `tailwind.config.js`; tokens em `src/index.css`)
 - [lucide-react](https://lucide.dev/) — ícones
 - [oxlint](https://oxc.rs/) — lint

@@ -18,7 +18,7 @@ export function Footer() {
 
         <div className="flex items-center gap-6">
           <Link
-            to="/dermatologista-online"
+            to="/consulta-online"
             className="text-sm font-medium text-rose-700 transition hover:text-rose-800"
           >
             Consulta online
