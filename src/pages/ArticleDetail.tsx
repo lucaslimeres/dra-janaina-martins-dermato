@@ -27,7 +27,7 @@ function useArticleStructuredData(article: ReturnType<typeof getArticleBySlug>) 
       author: {
         "@type": "Person",
         name: site.doctorName,
-        jobTitle: "Dermatologista",
+        jobTitle: "Médica",
       },
     });
     document.head.appendChild(script);

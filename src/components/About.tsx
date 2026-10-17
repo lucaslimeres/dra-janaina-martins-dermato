@@ -33,7 +33,7 @@ export function About() {
           <div className="absolute -bottom-6 -right-6 -z-10 h-full w-full rounded-[2rem] bg-rose-100 sm:-bottom-8 sm:-right-8" />
           <img
             src={aboutImg}
-            alt={`${site.doctorName}, dermatologista, em atendimento`}
+            alt={`${site.doctorName} em atendimento`}
             className="aspect-4/5 w-full rounded-[2rem] object-cover shadow-xl"
           />
         </div>

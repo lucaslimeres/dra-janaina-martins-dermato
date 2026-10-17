@@ -8,6 +8,7 @@ const links = [
   { label: "Sobre", to: "/#sobre" },
   { label: "Procedimentos", to: "/#procedimentos" },
   { label: "Depoimentos", to: "/#depoimentos" },
+  { label: "Consulta online", to: "/consulta-online" },
   { label: "Conteúdos", to: "/conteudos" },
   { label: "Contato", to: "/#contato" },
 ];
@@ -38,12 +39,12 @@ export function Navbar() {
           />
         </Link>
 
-        <div className="hidden items-center gap-9 md:flex">
+        <div className="hidden items-center gap-7 lg:flex xl:gap-9">
           {links.map((link) => (
             <Link
               key={link.to}
               to={link.to}
-              className="text-sm font-medium text-ink/70 transition hover:text-rose-700"
+              className="whitespace-nowrap text-sm font-medium text-ink/70 transition hover:text-rose-700"
             >
               {link.label}
             </Link>
@@ -52,7 +53,7 @@ export function Navbar() {
         </div>
 
         <button
-          className="text-ink md:hidden"
+          className="text-ink lg:hidden"
           onClick={() => setOpen((v) => !v)}
           aria-label={open ? "Fechar menu" : "Abrir menu"}
         >
@@ -61,7 +62,7 @@ export function Navbar() {
       </nav>
 
       {open && (
-        <div className="border-t border-rose-100 bg-cream px-5 pb-6 pt-2 md:hidden">
+        <div className="border-t border-rose-100 bg-cream px-5 pb-6 pt-2 lg:hidden">
           <div className="flex flex-col gap-4">
             {links.map((link) => (
               <Link

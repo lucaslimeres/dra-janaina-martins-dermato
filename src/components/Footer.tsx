@@ -16,12 +16,20 @@ export function Footer() {
         />
         <p className="text-xs text-ink/50">{site.crm}</p>
 
-        <Link
-          to="/conteudos"
-          className="text-sm font-medium text-rose-700 transition hover:text-rose-800"
-        >
-          Conteúdos
-        </Link>
+        <div className="flex items-center gap-6">
+          <Link
+            to="/consulta-online"
+            className="text-sm font-medium text-rose-700 transition hover:text-rose-800"
+          >
+            Consulta online
+          </Link>
+          <Link
+            to="/conteudos"
+            className="text-sm font-medium text-rose-700 transition hover:text-rose-800"
+          >
+            Conteúdos
+          </Link>
+        </div>
 
         <div className="flex items-center gap-5 text-ink/60">
           <a
