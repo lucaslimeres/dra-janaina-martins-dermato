@@ -7,11 +7,26 @@ interface WhatsAppContextValue {
 
 const WhatsAppContext = createContext<WhatsAppContextValue | null>(null);
 
+/**
+ * Quando `true`, exibe o modal "atendimento exclusivamente particular" antes
+ * de abrir o WhatsApp. Desativado a pedido do cliente: os botões abrem o
+ * WhatsApp direto. Para reativar, basta voltar para `true`.
+ */
+const SHOW_PRIVATE_CARE_MODAL = false;
+
+function openWhatsApp(message?: string) {
+  window.open(buildWhatsAppUrl(message), "_blank", "noopener,noreferrer");
+}
+
 export function WhatsAppProvider({ children }: { children: ReactNode }) {
   const [isOpen, setIsOpen] = useState(false);
   const [pendingMessage, setPendingMessage] = useState<string | undefined>(undefined);
 
   const requestWhatsApp = useCallback((message?: string) => {
+    if (!SHOW_PRIVATE_CARE_MODAL) {
+      openWhatsApp(message);
+      return;
+    }
     setPendingMessage(message);
     setIsOpen(true);
   }, []);
@@ -19,7 +34,7 @@ export function WhatsAppProvider({ children }: { children: ReactNode }) {
   const close = () => setIsOpen(false);
 
   const confirm = () => {
-    window.open(buildWhatsAppUrl(pendingMessage), "_blank", "noopener,noreferrer");
+    openWhatsApp(pendingMessage);
     setIsOpen(false);
   };
 
