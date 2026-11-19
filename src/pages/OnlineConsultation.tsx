@@ -228,9 +228,7 @@ export function OnlineConsultation() {
             </p>
 
             <div className="mt-9 flex flex-col items-center gap-4 sm:flex-row sm:justify-center lg:justify-start">
-              <WhatsAppButton message={whatsAppMessage}>
-                Agendar consulta online
-              </WhatsAppButton>
+              <WhatsAppButton message={whatsAppMessage} />
               <a
                 href="#condicoes"
                 className="text-sm font-medium text-ink/70 underline decoration-rose-300 decoration-2 underline-offset-4 transition hover:text-rose-700"
@@ -344,9 +342,7 @@ export function OnlineConsultation() {
             <WhatsAppButton
               variant="outline"
               message="Olá! Gostaria de saber se o meu caso pode ser atendido na consulta online com a Dra. Janaína Martins."
-            >
-              Tirar dúvidas pelo WhatsApp
-            </WhatsAppButton>
+            />
           </div>
         </div>
       </section>
@@ -485,9 +481,7 @@ export function OnlineConsultation() {
               variant="solid"
               className="!bg-white !text-rose-800 hover:!bg-rose-50 !shadow-none"
               message={whatsAppMessage}
-            >
-              Agendar consulta online
-            </WhatsAppButton>
+            />
           </div>
         </div>
       </section>
