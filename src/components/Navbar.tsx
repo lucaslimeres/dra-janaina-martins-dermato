@@ -39,7 +39,7 @@ export function Navbar() {
           />
         </Link>
 
-        <div className="hidden items-center gap-7 lg:flex xl:gap-9">
+        <div className="hidden items-center gap-5 lg:flex xl:gap-9">
           {links.map((link) => (
             <Link
               key={link.to}
@@ -49,7 +49,7 @@ export function Navbar() {
               {link.label}
             </Link>
           ))}
-          <WhatsAppButton>Agendar consulta</WhatsAppButton>
+          <WhatsAppButton className="!px-5 xl:!px-7" />
         </div>
 
         <button
@@ -74,9 +74,7 @@ export function Navbar() {
                 {link.label}
               </Link>
             ))}
-            <WhatsAppButton className="mt-2 w-full">
-              Agendar consulta
-            </WhatsAppButton>
+            <WhatsAppButton className="mt-2 w-full" />
           </div>
         </div>
       )}

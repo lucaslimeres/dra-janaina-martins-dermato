@@ -36,9 +36,7 @@ export function Hero() {
           </p>
 
           <div className="mt-9 flex flex-col items-center gap-4 sm:flex-row sm:justify-center lg:justify-start">
-            <WhatsAppButton message="Olá! Vim pelo site e gostaria de agendar uma consulta com a Dra. Janaína Martins.">
-              Agendar pelo WhatsApp
-            </WhatsAppButton>
+            <WhatsAppButton message="Olá! Vim pelo site e gostaria de agendar uma consulta com a Dra. Janaína Martins." />
             <a
               href="#procedimentos"
               className="text-sm font-medium text-ink/70 underline decoration-rose-300 decoration-2 underline-offset-4 transition hover:text-rose-700"

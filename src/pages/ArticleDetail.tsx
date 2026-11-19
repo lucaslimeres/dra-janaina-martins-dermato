@@ -141,9 +141,7 @@ export function ArticleDetail() {
           <div className="mt-5">
             <WhatsAppButton
               message={`Olá! Li o artigo sobre "${article.title}" no site e gostaria de agendar uma consulta.`}
-            >
-              Agendar pelo WhatsApp
-            </WhatsAppButton>
+            />
           </div>
         </div>
 

@@ -127,9 +127,7 @@ export function Services() {
           <WhatsAppButton
             variant="outline"
             message="Olá! Gostaria de saber mais sobre os procedimentos oferecidos."
-          >
-            Falar com a clínica
-          </WhatsAppButton>
+          />
         </div>
       </div>
     </section>
