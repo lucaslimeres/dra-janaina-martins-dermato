@@ -35,9 +35,7 @@ export function CtaSection() {
             variant="solid"
             className="!bg-white !text-rose-800 hover:!bg-rose-50 !shadow-none"
             message="Olá! Vim pelo site e gostaria de agendar uma consulta com a Dra. Janaína Martins."
-          >
-            Agendar consulta agora
-          </WhatsAppButton>
+          />
         </div>
       </div>
     </section>

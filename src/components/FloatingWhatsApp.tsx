@@ -6,7 +6,7 @@ export function FloatingWhatsApp() {
   return (
     <button
       onClick={() => requestWhatsApp()}
-      aria-label="Falar no WhatsApp"
+      aria-label="Agendar pelo WhatsApp"
       className="fixed bottom-6 right-6 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-rose-600 text-white shadow-xl shadow-rose-900/30 transition hover:scale-105 hover:bg-rose-700 sm:bottom-8 sm:right-8"
     >
       <svg viewBox="0 0 24 24" className="h-7 w-7 fill-current" aria-hidden="true">

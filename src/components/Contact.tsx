@@ -87,9 +87,7 @@ export function Contact() {
         </div>
 
         <div className="mt-14 flex justify-center">
-          <WhatsAppButton message="Olá! Vim pelo site e gostaria de agendar uma consulta com a Dra. Janaína Martins.">
-            Agendar pelo WhatsApp
-          </WhatsAppButton>
+          <WhatsAppButton message="Olá! Vim pelo site e gostaria de agendar uma consulta com a Dra. Janaína Martins." />
         </div>
       </div>
     </section>
